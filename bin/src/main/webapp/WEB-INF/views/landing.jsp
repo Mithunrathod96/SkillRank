@@ -30,101 +30,61 @@
         }
 
         .navbar {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e1e4e8;
-            padding: 0.75rem 0;
+            background-color: var(--primary-bg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
         }
 
         .navbar-brand {
-            font-weight: 800;
-            font-size: 1.6rem;
-            color: #000000 !important;
-            letter-spacing: -1px;
-            display: flex;
-            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text-main) !important;
+            letter-spacing: -0.5px;
         }
 
-        .navbar-toggler {
-            border: none;
-            padding: 0;
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-        }
-
-        .navbar-brand .logo-box {
-            width: 14px;
-            height: 14px;
-            background-color: #27ab6b;
-            margin-left: 4px;
-            margin-top: -2px;
-            border-radius: 1px;
-            display: inline-block;
+        .navbar-brand span {
+            color: var(--accent-color);
         }
 
         .nav-link {
-            color: #39424e !important;
+            color: var(--text-muted) !important;
             font-weight: 500;
-            margin: 0 15px;
-            font-size: 0.95rem;
-            transition: color 0.2s;
+            margin: 0 10px;
+            transition: color 0.3s;
         }
 
         .nav-link:hover {
-            color: #27ab6b !important;
+            color: var(--accent-color) !important;
         }
 
-        .btn-login {
-            color: #39424e;
+        .btn-outline-custom {
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
             font-weight: 600;
-            text-decoration: none;
-            font-size: 0.95rem;
-            margin-right: 20px;
-            transition: color 0.2s;
+            padding: 8px 20px;
+            border-radius: 6px;
+            transition: all 0.3s;
         }
 
-        .btn-login:hover {
-            color: #27ab6b;
+        .btn-outline-custom:hover {
+            background-color: var(--accent-color);
+            color: #fff;
         }
 
-        .btn-demo {
-            border: 1px solid #e1e4e8;
-            color: #000000;
-            font-weight: 600;
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-        }
-
-        .btn-demo:hover {
-            background-color: #f3f7f7;
-            border-color: #000000;
-        }
-
-        .btn-signup {
-            background-color: #000000;
-            color: #ffffff;
-            font-weight: 600;
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-size: 0.95rem;
+        .btn-primary-custom {
+            background-color: var(--accent-color);
             border: none;
-            transition: all 0.2s;
-            margin-left: 10px;
+            color: #fff;
+            font-weight: 600;
+            padding: 8px 10px;
+            border-radius: 6px;
+            transition: all 0.3s;
         }
 
-        .btn-signup:hover {
-            background-color: #333333;
-            color: #ffffff;
-            transform: translateY(-1px);
+        .btn-primary-custom:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
         }
 
         /* Hero Section */
@@ -217,20 +177,9 @@
         }
 
         .footer-logo {
-            font-weight: 800;
-            font-size: 1.6rem;
+            font-weight: 700;
+            font-size: 1.5rem;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-logo .logo-box {
-            width: 14px;
-            height: 14px;
-            background-color: #27ab6b;
-            margin-left: 4px;
-            margin-top: -2px;
-            border-radius: 1px;
             display: inline-block;
         }
 
@@ -258,22 +207,19 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="/">SkillRank<div class="logo-box"></div></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="/"><span>Skill</span>Rank</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Human Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Prepare</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Compete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
                 </ul>
-                <div class="d-flex align-items-center">
-                    <a href="/login" class="btn-login">Log In</a>
-                    <a href="#" class="btn btn-demo">Request Demo</a>
-                    <a href="/register" class="btn btn-signup">Create a free account</a>
+                <div class="d-flex gap-2">
+                    <a href="/login" class="btn btn-outline-custom">Log In</a>
+                    <a href="/register" class="btn btn-primary-custom px-4">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -423,7 +369,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <div class="footer-logo">SkillRank<div class="logo-box"></div></div>
+                    <div class="footer-logo"><span>Skill</span>Rank</div>
                     <p class="text-muted">The developer skill community that helps you grow and find your next big opportunity.</p>
                     <div class="d-flex gap-3">
                         <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>

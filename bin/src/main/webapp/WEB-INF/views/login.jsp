@@ -29,24 +29,14 @@
         }
 
         .brand {
-            font-weight: 800;
-            font-size: 1.8rem;
+            font-weight: 700;
+            font-size: 1.5rem;
             margin-bottom: 30px;
             text-align: center;
-            color: #ffffff;
-            letter-spacing: -1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .brand .logo-box {
-            width: 14px;
-            height: 14px;
-            background-color: #27ab6b;
-            margin-left: 4px;
-            border-radius: 1px;
-            display: inline-block;
+        .brand span {
+            color: #007bff;
         }
 
         .form-control {
@@ -92,7 +82,7 @@
 <body>
 
     <div class="login-card">
-        <div class="brand">SkillRank<div class="logo-box"></div></div>
+        <div class="brand"><span>Skill</span>Rank</div>
         <h4 class="text-center mb-4">Login to Your Account</h4>
         
         <c:if test="${not empty error}">

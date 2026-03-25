@@ -17,41 +17,13 @@
         }
 
         .navbar {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e1e4e8;
-            padding: 0.75rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            background-color: #1a2332;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .navbar-brand {
-            font-weight: 800;
-            font-size: 1.6rem;
-            color: #000000 !important;
-            letter-spacing: -1px;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-toggler {
-            border: none;
-            padding: 0;
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-        }
-
-        .navbar-brand .logo-box {
-            width: 14px;
-            height: 14px;
-            background-color: #27ab6b;
-            margin-left: 4px;
-            border-radius: 1px;
-            display: inline-block;
+        .navbar-brand span {
+            color: #007bff;
+            font-weight: 700;
         }
 
         .dashboard-container {
@@ -97,9 +69,9 @@
 
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="/">SkillRank<div class="logo-box"></div></a>
+            <a class="navbar-brand text-white" href="/"><span>Skill</span>Rank</a>
             <div class="ms-auto d-flex align-items-center">
-                <span class="me-3 text-dark">Hi, ${user.username}</span>
+                <span class="me-3 text-muted">Hi, ${user.username}</span>
                 <a href="/logout" class="btn-logout"><i class="fas fa-sign-out-alt me-1"></i> Logout</a>
             </div>
         </div>

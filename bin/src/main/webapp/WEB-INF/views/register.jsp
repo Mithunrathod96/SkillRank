@@ -30,24 +30,14 @@
         }
 
         .brand {
-            font-weight: 800;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             text-align: center;
-            color: #ffffff;
-            letter-spacing: -1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .brand .logo-box {
-            width: 14px;
-            height: 14px;
-            background-color: #27ab6b;
-            margin-left: 4px;
-            border-radius: 1px;
-            display: inline-block;
+        .brand span {
+            color: #007bff;
         }
 
         .form-control, .form-select {
@@ -99,7 +89,7 @@
 <body>
 
     <div class="login-card">
-        <div class="brand">SkillRank<div class="logo-box"></div></div>
+        <div class="brand"><span>Skill</span>Rank</div>
         <h4 class="text-center mb-4">Create Your Profile</h4>
 
         <c:if test="${not empty error}">
