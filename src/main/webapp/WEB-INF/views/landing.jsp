@@ -35,6 +35,7 @@
             padding: 0.75rem 0;
             transition: all 0.3s ease;
             box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            position: relative;
         }
 
         .navbar-brand {
@@ -125,6 +126,128 @@
             background-color: #333333;
             color: #ffffff;
             transform: translateY(-1px);
+        }
+
+        /* Mega Menu Styles */
+        .nav-item.dropdown-mega {
+            position: static;
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 850px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-radius: 14px;
+            padding: 40px;
+            display: none;
+            z-index: 1000;
+            transition: all 0.35s cubic-bezier(0.2, 1, 0.3, 1);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .mega-menu::before {
+            display: none; 
+        }
+
+        /* Triangle on the Products link itself */
+        .nav-item.dropdown-mega .nav-link {
+            position: relative;
+        }
+
+        .nav-item.dropdown-mega .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -22px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 14px;
+            height: 14px;
+            background: #ffffff;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            border-left: 1px solid rgba(0,0,0,0.1);
+            z-index: 1002;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown-mega:hover .nav-link::after {
+                display: block;
+            }
+            
+            .nav-item.dropdown-mega:hover .mega-menu {
+                display: block;
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+                pointer-events: auto;
+            }
+        }
+
+        /* Add a small invisible bridge to prevent losing hover */
+        .nav-item.dropdown-mega::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            display: none;
+        }
+
+        .nav-item.dropdown-mega:hover::after {
+            display: block;
+        }
+
+        .mega-menu-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .mega-menu-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .mega-menu-title {
+            color: #727b84;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .mega-menu-item {
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s;
+        }
+
+        .mega-menu-item:hover .mega-menu-item-title {
+            color: #27ab6b;
+        }
+
+        .mega-menu-item-title {
+            color: #000000;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .mega-menu-item-desc {
+            color: #727b84;
+            font-size: 0.9rem;
+            font-weight: 400;
+            line-height: 1.4;
         }
 
         /* Hero Section */
@@ -264,7 +387,61 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item dropdown-mega">
+                        <a class="nav-link" href="#">Products</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <!-- Products Section -->
+                                <div class="mega-menu-section">
+                                    <div class="mega-menu-title">Products</div>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Screen</span>
+                                        <span class="mega-menu-item-desc">Save time and accelerate your hiring</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Interview</span>
+                                        <span class="mega-menu-item-desc">Conduct stellar technical interviews</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Engage</span>
+                                        <span class="mega-menu-item-desc">Promote your tech brand</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">SkillUp</span>
+                                        <span class="mega-menu-item-desc">Mobilize your tech talent</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Chakra</span>
+                                        <span class="mega-menu-item-desc">Pre-screen with AI interviews</span>
+                                    </a>
+                                </div>
+                                <!-- Features Section -->
+                                <div class="mega-menu-section">
+                                    <div class="mega-menu-title">Features</div>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Certified Assessments</span>
+                                        <span class="mega-menu-item-desc">Launch standardized, role-based tests in minutes</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Plagiarism Detection</span>
+                                        <span class="mega-menu-item-desc">Ensure fairness with AI-powered plagiarism detection</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Real-World Questions</span>
+                                        <span class="mega-menu-item-desc">Assess technical hires with real-world coding questions</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Integrations</span>
+                                        <span class="mega-menu-item-desc">Seamlessly connect with your favorite tools</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">AI Add-on</span>
+                                        <span class="mega-menu-item-desc">Redefine hiring with integrity, depth and speed.</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
