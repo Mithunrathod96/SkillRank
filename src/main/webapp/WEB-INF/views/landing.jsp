@@ -252,22 +252,92 @@
 
         /* Hero Section */
         .hero-section {
-            padding: 120px 0 80px;
-            background: radial-gradient(circle at top right, rgba(0, 123, 255, 0.1), transparent);
+            padding: 100px 0 60px;
+            background: #ffffff;
+            text-align: center;
         }
 
         .hero-title {
-            font-size: 4rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-size: 4.5rem;
+            font-weight: 400;
+            color: #0e141e;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            color: #27ab6b;
+            font-weight: 300;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 600px;
+            font-size: 1.2rem;
+            color: #39424e;
+            margin: 0 auto 40px;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 80px;
+        }
+
+        .btn-trial {
+            background-color: #000000;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-trial:hover {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .btn-devs {
+            border: 1px solid #e1e4e8;
+            color: #0e141e;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-devs:hover {
+            background-color: #f3f7f7;
+        }
+
+        /* Logos Grid */
+        .logo-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #f3f7f7;
+        }
+
+        .logo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px 60px;
+            opacity: 0.6;
+        }
+
+        .logo-grid img {
+            height: 25px;
+            filter: grayscale(100%);
+            transition: all 0.3s;
+        }
+
+        .logo-grid img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
         }
 
         /* Feature Cards */
@@ -442,10 +512,85 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Human Data</a></li>
+                    <li class="nav-item dropdown-mega">
+                        <a class="nav-link" href="#">Solutions</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <!-- What We Do Section -->
+                                <div class="mega-menu-section">
+                                    <div class="mega-menu-title">What We Do</div>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Set Up Your Skills Strategy</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Showcase Your Tech Brand</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Optimize Your Hiring Process</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Mobilize Your Internal Talent</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">AI Data Services</span>
+                                    </a>
+                                </div>
+                                <!-- Use Cases Section -->
+                                <div class="mega-menu-section">
+                                    <div class="mega-menu-title">Use Cases</div>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Remote Hiring</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">University Hiring</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown-mega">
+                        <a class="nav-link" href="#">Resources</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <!-- Learn Section -->
+                                <div class="mega-menu-section">
+                                    <div class="mega-menu-title">Learn</div>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Blog</span>
+                                        <span class="mega-menu-item-desc">Hiring best practices and industry insights</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Roles Directory</span>
+                                        <span class="mega-menu-item-desc">Explore the definitive directory of tech roles</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Customer Stories</span>
+                                        <span class="mega-menu-item-desc">How leading companies use SkillRank</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Developer Skills Report</span>
+                                        <span class="mega-menu-item-desc">Key trends and forecasts for 2025</span>
+                                    </a>
+                                </div>
+                                <!-- Product Help Section -->
+                                <div class="mega-menu-section">
+                                    <div class="mega-menu-title">Product Help</div>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">What's New</span>
+                                        <span class="mega-menu-item-desc">Get the latest product news and updates</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Partners</span>
+                                        <span class="mega-menu-item-desc">Learn more about the SkillRank Partner Network</span>
+                                    </a>
+                                    <a href="#" class="mega-menu-item">
+                                        <span class="mega-menu-item-title">Support</span>
+                                        <span class="mega-menu-item-desc">Everything you need to know to get started</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <a href="/login" class="btn-login">Log In</a>
@@ -459,17 +604,28 @@
     <!-- Hero Section -->
     <header class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title">Code. Practice.<br><span>Get Hired.</span></h1>
-                    <p class="hero-subtitle">The standard for assessing developer skills. Help companies find the best talent and help developers sharpen their skills.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="/register" class="btn btn-primary-custom btn-lg px-5">Join the Community</a>
-                        <a href="#" class="btn btn-outline-custom btn-lg px-4">Explore Problems</a>
-                    </div>
+            <h1 class="hero-title"><span>H</span> the next<br>generation developer</h1>
+            <p class="hero-subtitle">We help thousands of companies hire and upskill the next generation of developers, and millions of developers to become one.</p>
+            <div class="hero-btns">
+                <a href="/register" class="btn-trial">Start a free trial</a>
+                <a href="#" class="btn-devs">For developers</a>
+            </div>
+            
+            <div class="logo-section mt-5">
+                <div class="logo-grid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Belo.svg" alt="Airbnb">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/g/g4/Atlassian_logo.svg" alt="Atlassian">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Snapchat-logo.svg" alt="Snap">
                 </div>
-                <div class="col-lg-6 d-none d-lg-block text-center">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coding Image" class="img-fluid rounded-3 shadow-lg" style="transform: perspective(1000px) rotateY(-10deg);">
+                <div class="logo-grid mt-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/DoorDash_Logo.svg" alt="DoorDash">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" alt="Adobe">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Goldman_Sachs.svg" alt="Goldman Sachs">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" alt="Canva">
                 </div>
             </div>
         </div>
